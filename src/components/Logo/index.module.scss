@@ -1,0 +1,11 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.container {
+    @include font-ops;
+}
+
+.link {
+    text-decoration: none;
+    color: $text-black;
+}

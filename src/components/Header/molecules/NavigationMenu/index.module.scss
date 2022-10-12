@@ -1,0 +1,60 @@
+@import "../../../../styles/variables.scss";
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger {
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    margin-right: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    span {
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+        height: 3px;
+        background: $text-black;
+        transition: all 0.3s;
+        position: absolute;
+
+        &:nth-child(1) {
+            top: 0;
+        }
+
+        &:nth-child(2) {
+            width: 75%;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        &:nth-child(3) {
+            bottom: 0;
+        }
+    }
+}
+
+.hamburgerActive {
+    span {
+        &:nth-child(1) {
+            top: 50%;
+            transform: translate(0, -50%) rotate(135deg);
+        }
+
+        &:nth-child(2) {
+            top: 50%;
+            transform: translate(0, -50%) scale(0);
+        }
+
+        &:nth-child(3) {
+            bottom: 50%;
+            transform: translate(0, 50%) rotate(-135deg);
+        }
+    }
+}
