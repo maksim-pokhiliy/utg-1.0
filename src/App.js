@@ -7,11 +7,9 @@ import {
   Navigate,
 } from "react-router-dom";
 
-import MainLayout from "./layouts/MainLayout";
-
 import { PUBLIC_ROUTES, ROOT } from "./utils/constants/routes";
 
-import "./utils/i18n";
+import MainLayout from "./layouts/MainLayout";
 
 function App() {
   const renderRoutes = () => {
