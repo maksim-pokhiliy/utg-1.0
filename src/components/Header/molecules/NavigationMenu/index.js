@@ -6,6 +6,16 @@ import Logo from "../../../Logo";
 import styles from "./index.module.scss";
 import classNames from "classnames";
 
+const Menu = ({ menuItems, isOpen }) => {
+  return (
+    <div
+      className={classNames(styles.menuContainer, {
+        [styles.menuContainerActive]: isOpen,
+      })}
+    />
+  );
+};
+
 const Burger = ({ isOpen, handleClick }) => {
   return (
     <div
@@ -28,11 +38,18 @@ const NavigationMenu = ({ menuItems }) => {
 
   return (
     <div className={styles.container}>
+      <Menu menuItems={menuItems} isOpen={isOpen} />
+
       <Burger isOpen={isOpen} handleClick={handleBurgerClick} />
 
       <Logo />
     </div>
   );
+};
+
+Menu.propTypes = {
+  menuItems: PropTypes.object.isRequired,
+  isOpen: PropTypes.bool.isRequired,
 };
 
 Burger.propTypes = {

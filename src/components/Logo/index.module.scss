@@ -3,6 +3,8 @@
 
 .container {
     @include font-ops;
+    position: relative;
+    z-index: 1;
 }
 
 .link {

@@ -5,6 +5,20 @@
     align-items: center;
 }
 
+.menuContainer {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    background-color: $text-white;
+    transition: all 0.3s;
+}
+
+.menuContainerActive {
+    right: 10%;
+}
+
 .hamburger {
     width: 30px;
     height: 25px;
