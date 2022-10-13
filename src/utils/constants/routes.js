@@ -2,17 +2,21 @@ import MainPage from "../../pages/MainPage";
 import CategoryPage from "../../pages/CategoryPage";
 
 export const ROOT = "/";
-export const CARRIERS = `${ROOT}carriers`;
-export const ADAPT_SYSTEM = `${ROOT}adapt-system`;
-export const POCKETS = `${ROOT}pockets`;
-export const ACCESSORIES = `${ROOT}accessories`;
-export const ARMOR = `${ROOT}armor`;
+export const COLLECTIONS = `${ROOT}collections${ROOT}`;
+export const CARRIERS = `${COLLECTIONS}carriers${ROOT}`;
+export const ADAPT_SYSTEM = `${COLLECTIONS}adapt-system${ROOT}`;
+export const POCKETS = `${COLLECTIONS}pockets${ROOT}`;
+export const ACCESSORIES = `${COLLECTIONS}accessories${ROOT}`;
+export const ARMOR = `${COLLECTIONS}armor${ROOT}`;
+export const PRODUCT = `${COLLECTIONS}:collectionId/:productId`;
 
 export const PUBLIC_ROUTES = {
   [ROOT]: MainPage,
+  [COLLECTIONS]: CategoryPage,
   [CARRIERS]: CategoryPage,
   [ADAPT_SYSTEM]: CategoryPage,
   [POCKETS]: CategoryPage,
   [ACCESSORIES]: CategoryPage,
   [ARMOR]: CategoryPage,
+  [PRODUCT]: CategoryPage,
 };

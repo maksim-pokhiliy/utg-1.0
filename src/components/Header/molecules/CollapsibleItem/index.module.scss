@@ -1,0 +1,123 @@
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/mixins.scss";
+
+.container {
+    width: 100%;
+    padding: 15px 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.crossContainer {
+    width: 17px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    & div {
+        width: 100%;
+        height: 2px;
+        background-color: $text-black;
+        position: absolute;
+    }
+
+    & div:nth-child(1) {
+        transform: rotate(90deg);
+    }
+}
+
+.crossContainerOpen {
+    transform: rotate(180deg);
+
+    & div:nth-child(1) {
+        transform: scale(0);
+    }
+}
+
+.link {
+    text-decoration: none;
+    color: $text-black;
+    transition: all 0.3s;
+
+    &:hover {
+        color: $text-orange;
+    }
+}
+
+.activeLink {
+    color: $text-orange;
+}
+
+.body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.bodyOpen {
+    max-height: 150px;
+    padding-top: 15px;
+    opacity: 1;
+}
+
+.itemLink {
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: $text-black;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+
+    &:hover {
+        color: $text-orange;
+    }
+}
+
+.itemLinkActive {
+    color: $text-orange;
+}
+
+@include mobile-md {
+    .bodyOpen {
+        padding-top: 20px;
+    }
+
+    .itemLink {
+        margin-bottom: 20px;
+    }
+}
+
+@include tablet {
+    .bodyOpen {
+        padding-top: 25px;
+    }
+
+    .itemLink {
+        margin-bottom: 25px;
+    }
+}
+
+@include desktop {
+    .bodyOpen {
+        padding-top: 30px;
+    }
+
+    .itemLink {
+        margin-bottom: 30px;
+    }
+}

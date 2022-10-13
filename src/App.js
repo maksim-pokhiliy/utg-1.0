@@ -1,17 +1,15 @@
 import React from "react";
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Routes,
   Navigate,
 } from "react-router-dom";
 
-import MainLayout from "./layouts/MainLayout";
-
 import { PUBLIC_ROUTES, ROOT } from "./utils/constants/routes";
 
-import "./utils/i18n";
+import MainLayout from "./layouts/MainLayout";
 
 function App() {
   const renderRoutes = () => {
