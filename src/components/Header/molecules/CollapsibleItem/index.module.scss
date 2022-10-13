@@ -4,6 +4,7 @@
 .container {
     width: 100%;
     padding: 15px 0;
+    box-sizing: border-box;
     font-family: "Ubuntu", sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -72,6 +73,7 @@
 .bodyOpen {
     max-height: 150px;
     padding-top: 15px;
+    box-sizing: border-box;
     opacity: 1;
 }
 

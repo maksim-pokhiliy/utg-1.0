@@ -15,8 +15,8 @@
 
 @include mobile-md {
     .container {
-        padding: 20px;
         height: $header-height-mobile-md;
+        padding: 20px;
     }
 }
 
