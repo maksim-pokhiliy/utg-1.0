@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 import Logo from "../../../Logo";
+import CollapsibleItem from "../CollapsibleItem";
 
 import styles from "./index.module.scss";
-import classNames from "classnames";
 
 const Menu = ({ menuItems, isOpen }) => {
   return (
@@ -12,7 +13,11 @@ const Menu = ({ menuItems, isOpen }) => {
       className={classNames(styles.menuContainer, {
         [styles.menuContainerActive]: isOpen,
       })}
-    />
+    >
+      {Object.keys(menuItems).map((item) => {
+        return <CollapsibleItem key={item} path={item} {...menuItems[item]} />;
+      })}
+    </div>
   );
 };
 
