@@ -1,29 +1,42 @@
 @import "../../../../styles/variables.scss";
+@import "../../../../styles/mixins.scss";
 
 .container {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
-.menuContainer {
-    width: 100vw;
-    min-height: calc(100vh - $header-height);
-    max-height: calc(100vh - $header-height);
+.sideMenuContainer {
+    width: $side-menu-width;
+    min-height: 100vh;
+    max-height: 100vh;
     position: absolute;
     top: 0;
-    right: 100%;
+    left: -$side-menu-width;
     background-color: $text-white;
     transition: all 0.3s;
-    padding: 0 15px 15px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    margin-top: $header-height;
-    overflow-y: scroll;
 }
 
-.menuContainerActive {
-    right: 0;
+.sideMenuScrollContainer {
+    min-height: calc(100vh - $header-height-mobile-sm);
+    max-height: calc(100vh - $header-height-mobile-sm);
+    margin-top: $header-height-mobile-sm;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 15px;
+    box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.sideMenuContainerActive {
+    left: 0;
+    box-shadow: 1px 0px 4px 0px rgba(149, 149, 149, 0.7);
 }
 
 .hamburger {
@@ -77,5 +90,44 @@
             bottom: 50%;
             transform: translate(0, 50%) rotate(-135deg);
         }
+    }
+}
+
+@include mobile-md {
+    .sideMenuScrollContainer {
+        padding: 0 20px 20px;
+        min-height: calc(100vh - $header-height-mobile-md);
+        max-height: calc(100vh - $header-height-mobile-md);
+        margin-top: $header-height-mobile-md;
+    }
+
+    .hamburger {
+        margin-right: 20px;
+    }
+}
+
+@include tablet {
+    .sideMenuScrollContainer {
+        padding: 0 25px 25px;
+        min-height: calc(100vh - $header-height-tablet);
+        max-height: calc(100vh - $header-height-tablet);
+        margin-top: $header-height-tablet;
+    }
+
+    .hamburger {
+        margin-right: 25px;
+    }
+}
+
+@include desktop {
+    .sideMenuScrollContainer {
+        padding: 0 30px 30px;
+        min-height: calc(100vh - $header-height-desktop);
+        max-height: calc(100vh - $header-height-desktop);
+        margin-top: $header-height-desktop;
+    }
+
+    .hamburger {
+        margin-right: 30px;
     }
 }

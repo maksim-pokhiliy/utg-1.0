@@ -1,6 +1,20 @@
+// COLORS
 $text-black: #000000;
 $text-white: #ffffff;
 $text-orange: #fc4c02;
 $background-white: #ffffff;
 $background-turquoise: #003a40;
-$header-height: 55px;
+$background-gray: #959595;
+
+// SIZES
+$header-height-mobile-sm: 55px;
+$header-height-mobile-md: 60px;
+$header-height-tablet: 65px;
+$header-height-desktop: 70px;
+$side-menu-width: 320px;
+
+// BREAK POINTS
+$mobile-sm-width: 320px;
+$mobile-md-width: 576px;
+$tablet-width: 992px;
+$desktop-width: 1200px;

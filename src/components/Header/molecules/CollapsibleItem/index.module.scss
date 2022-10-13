@@ -1,4 +1,5 @@
 @import "../../../../styles/variables.scss";
+@import "../../../../styles/mixins.scss";
 
 .container {
     width: 100%;
@@ -14,8 +15,8 @@
     align-items: center;
 }
 
-.collapseContainer {
-    width: 20px;
+.crossContainer {
+    width: 17px;
     height: 20px;
     display: flex;
     justify-content: center;
@@ -36,7 +37,7 @@
     }
 }
 
-.collapseContainerOpen {
+.crossContainerOpen {
     transform: rotate(180deg);
 
     & div:nth-child(1) {
@@ -47,6 +48,11 @@
 .link {
     text-decoration: none;
     color: $text-black;
+    transition: all 0.3s;
+
+    &:hover {
+        color: $text-orange;
+    }
 }
 
 .activeLink {
@@ -75,8 +81,43 @@
     text-decoration: none;
     color: $text-black;
     margin-bottom: 15px;
+    transition: all 0.3s;
+
+    &:hover {
+        color: $text-orange;
+    }
 }
 
 .itemLinkActive {
     color: $text-orange;
+}
+
+@include mobile-md {
+    .bodyOpen {
+        padding-top: 20px;
+    }
+
+    .itemLink {
+        margin-bottom: 20px;
+    }
+}
+
+@include tablet {
+    .bodyOpen {
+        padding-top: 25px;
+    }
+
+    .itemLink {
+        margin-bottom: 25px;
+    }
+}
+
+@include desktop {
+    .bodyOpen {
+        padding-top: 30px;
+    }
+
+    .itemLink {
+        margin-bottom: 30px;
+    }
 }

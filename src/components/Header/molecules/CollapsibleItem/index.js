@@ -8,12 +8,14 @@ import styles from "./index.module.scss";
 const CollapsibleItem = ({ title, items, path }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const renderCollapseIcon = () => {
+  const handleOpen = () => setIsOpen(!isOpen);
+
+  const renderCrossIcon = () => {
     return (
       <div
-        onClick={() => setIsOpen(!isOpen)}
-        className={classNames(styles.collapseContainer, {
-          [styles.collapseContainerOpen]: isOpen,
+        onClick={handleOpen}
+        className={classNames(styles.crossContainer, {
+          [styles.crossContainerOpen]: isOpen,
         })}
       >
         <div />
@@ -54,7 +56,7 @@ const CollapsibleItem = ({ title, items, path }) => {
           {title}
         </NavLink>
 
-        {!!items && !!items.length && renderCollapseIcon()}
+        {!!items && !!items.length && renderCrossIcon()}
       </div>
 
       <div
