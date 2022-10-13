@@ -1,5 +1,29 @@
+@import "../../styles/mixins.scss";
+
 .container {
     min-width: 100vw;
     min-height: 100vh;
     position: relative;
+}
+
+.content {
+    padding: 15px;
+}
+
+@include mobile-md {
+    .content {
+        padding: 40px 80px;
+    }
+}
+
+@include tablet {
+    .content {
+        padding: 50px 100px;
+    }
+}
+
+@include desktop {
+    .content {
+        padding: 60px 120px;
+    }
 }

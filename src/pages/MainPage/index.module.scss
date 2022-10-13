@@ -1,0 +1,56 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.categories {
+    display: grid;
+    grid-gap: 15px;
+}
+
+.categoryContainer {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $background-gray;
+    text-decoration: none;
+    color: $text-black;
+}
+
+.title {
+    font-size: 20px;
+    padding: 0 0 15px;
+}
+
+.image {
+    width: 100%;
+}
+
+.categoryTitle {
+    font-size: 18px;
+}
+
+@include mobile-md {
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+@include tablet {
+    .categories {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 25px;
+    }
+}
+
+@include desktop {
+    .categories {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+    }
+}
