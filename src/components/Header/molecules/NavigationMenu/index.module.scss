@@ -11,7 +11,7 @@
     width: $side-menu-width;
     min-height: 100vh;
     max-height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -$side-menu-width;
     background-color: $text-white;
