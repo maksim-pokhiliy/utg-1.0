@@ -28,10 +28,6 @@
     flex-direction: column;
     padding: 0 15px 15px;
     box-sizing: border-box;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
 }
 
 .sideMenuContainerActive {
