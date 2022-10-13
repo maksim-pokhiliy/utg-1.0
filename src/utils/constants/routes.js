@@ -1,5 +1,5 @@
-import MainPage from "../../pages/MainPage";
 import CategoryPage from "../../pages/CategoryPage";
+import ProductPage from "../../pages/ProductPage";
 
 export const ROOT = "/";
 export const COLLECTIONS = `${ROOT}collections${ROOT}`;
@@ -11,12 +11,12 @@ export const ARMOR = `${COLLECTIONS}armor${ROOT}`;
 export const PRODUCT = `${COLLECTIONS}:collectionId/:productId`;
 
 export const PUBLIC_ROUTES = {
-  [ROOT]: MainPage,
+  [ROOT]: CategoryPage,
   [COLLECTIONS]: CategoryPage,
   [CARRIERS]: CategoryPage,
   [ADAPT_SYSTEM]: CategoryPage,
   [POCKETS]: CategoryPage,
   [ACCESSORIES]: CategoryPage,
   [ARMOR]: CategoryPage,
-  [PRODUCT]: CategoryPage,
+  [PRODUCT]: ProductPage,
 };
