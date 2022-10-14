@@ -1,4 +1,3 @@
-import MainPage from "../../pages/MainPage";
 import CategoryPage from "../../pages/CategoryPage";
 import ProductPage from "../../pages/ProductPage";
 
@@ -12,8 +11,7 @@ export const ARMOR = `${COLLECTIONS}armor${ROOT}`;
 export const PRODUCT = `${COLLECTIONS}:collectionId/:productId`;
 
 export const PUBLIC_ROUTES = {
-  [ROOT]: MainPage,
-  [COLLECTIONS]: MainPage,
+  [ROOT]: CategoryPage,
   [CARRIERS]: CategoryPage,
   [ADAPT_SYSTEM]: CategoryPage,
   [POCKETS]: CategoryPage,
