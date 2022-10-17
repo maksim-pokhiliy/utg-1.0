@@ -1,5 +1,4 @@
-import { get } from "lodash";
-import React, { useMemo } from "react";
+import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 import { PUBLIC_ROUTES as PRODUCTS } from "../../utils/constants/routes";
@@ -24,16 +23,6 @@ const CategoryPage = () => {
         </NavLink>
       );
     });
-
-    // return Object.keys(rest).map((key) => {
-    //   const { title, image, path } = rest[key];
-    //   return (
-    //     <NavLink key={key} className={styles.categoryContainer} to={path}>
-    //       <p className={styles.categoryTitle}>{title}</p>
-    //       <img src={image} alt="category" className={styles.image} />
-    //     </NavLink>
-    //   );
-    // });
   };
 
   return (
