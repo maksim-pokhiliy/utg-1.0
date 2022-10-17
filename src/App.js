@@ -13,21 +13,23 @@ import MainLayout from "./layouts/MainLayout";
 
 function App() {
   const renderRoutes = () => {
-    return Object.keys(PUBLIC_ROUTES).map((route) => {
-      const Component = PUBLIC_ROUTES[route];
+    return Object.values(PUBLIC_ROUTES)
+      .filter((el) => typeof el === "object")
+      .map((route) => {
+        const Component = route.component;
 
-      return (
-        <Route
-          key={route}
-          path={route}
-          element={
-            <MainLayout>
-              <Component />
-            </MainLayout>
-          }
-        />
-      );
-    });
+        return (
+          <Route
+            key={route.path}
+            path={route.path}
+            element={
+              <MainLayout>
+                <Component />
+              </MainLayout>
+            }
+          />
+        );
+      });
   };
 
   return (
