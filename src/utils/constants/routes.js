@@ -157,16 +157,6 @@ export const PUBLIC_ROUTES = {
       path: product.path,
     })),
   },
-  [COLLECTIONS]: {
-    title: "All categories",
-    component: CategoryPage,
-    path: ROOT,
-    products: Object.values(PRODUCTS).map((product) => ({
-      image: product.image,
-      title: product.title,
-      path: product.path,
-    })),
-  },
   [CARRIERS]: {
     title: "Carriers",
     component: CategoryPage,
