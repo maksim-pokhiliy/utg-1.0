@@ -29,7 +29,7 @@ const ProductPage = () => {
 
       <p className={styles.productPrice}>{`from ${product.price}`}</p>
 
-      <a href={`https://t.me/ksypooh?message="hello!"`} className={styles.link}>
+      <a href={`https://t.me/makspooh?message="hello!"`} className={styles.link}>
         Order in Telegram
       </a>
     </div>
