@@ -1,0 +1,38 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: $mobile-md-width;
+}
+
+.title {
+    font-size: 20px;
+    padding: 0 0 15px;
+}
+
+.image {
+    width: 100%;
+}
+
+.productPrice {
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.link {
+    color: $text-white;
+    background-color: $text-orange;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    padding: 15px 0;
+    transition: all 0.3s;
+    opacity: 0.9;
+
+    &:hover {
+        opacity: 1;
+    }
+}

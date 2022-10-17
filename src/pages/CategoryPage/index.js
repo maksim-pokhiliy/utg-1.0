@@ -1,49 +1,25 @@
-import { get } from "lodash";
-import React, { useMemo } from "react";
+import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
-import { PRODUCTS } from "../../utils/constants/products";
+import { PUBLIC_ROUTES as PRODUCTS } from "../../utils/constants/routes";
 
 import styles from "./index.module.scss";
 
 const CategoryPage = () => {
   const { pathname } = useLocation();
-
-  const productsPath = pathname
-    .split("/")
-    .filter((el) => el)
-    .join(".");
-
-  const { title, ...rest } = useMemo(
-    () => get(PRODUCTS, productsPath, PRODUCTS[Object.keys(PRODUCTS)[0]]),
-    [productsPath]
-  );
+  const { title, products } = PRODUCTS[pathname];
 
   const renderCategories = () => {
-    if (rest.products) {
-      return rest.products.map((product) => {
-        const { title, image, path, price } = product;
-
-        return (
-          <NavLink key={title} className={styles.categoryContainer} to={path}>
-            <p className={styles.categoryTitle}>{title}</p>
-
-            <img src={image} alt="category" className={styles.image} />
-
-            <p className={styles.categoryPrice}>{`from ${price}`}</p>
-          </NavLink>
-        );
-      });
-    }
-
-    return Object.keys(rest).map((key) => {
-      const { title, image, path } = rest[key];
+    return products.map((product) => {
+      const { title, image, path, price } = product;
 
       return (
-        <NavLink key={key} className={styles.categoryContainer} to={path}>
+        <NavLink key={title} className={styles.categoryContainer} to={path}>
           <p className={styles.categoryTitle}>{title}</p>
 
           <img src={image} alt="category" className={styles.image} />
+
+          {price && <p className={styles.categoryPrice}>{`from ${price}`}</p>}
         </NavLink>
       );
     });

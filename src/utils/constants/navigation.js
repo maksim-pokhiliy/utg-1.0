@@ -6,7 +6,7 @@ export const MENU_ITEMS = {
     items: [
       { title: "FCPC", path: `${CARRIERS}fcpc` },
       { title: "The Slickster", path: `${CARRIERS}slickster` },
-      { title: "Chest Rigs", path: `${CARRIERS}chest-rigs` },
+      { title: "Chesty Rig", path: `${CARRIERS}chesty-rig` },
     ],
   },
   [ADAPT_SYSTEM.replace("/", "")]: {
@@ -14,7 +14,7 @@ export const MENU_ITEMS = {
     items: [
       { title: "FCPC", path: `${ADAPT_SYSTEM}fcpc` },
       { title: "The Slickster", path: `${ADAPT_SYSTEM}slickster` },
-      { title: "Chest Rigs", path: `${ADAPT_SYSTEM}chest-rigs` },
+      { title: "Chesty Rig", path: `${ADAPT_SYSTEM}chesty-rig` },
     ],
   },
   [POCKETS.replace("/", "")]: {
@@ -22,7 +22,7 @@ export const MENU_ITEMS = {
     items: [
       { title: "FCPC", path: `${POCKETS}fcpc` },
       { title: "The Slickster", path: `${POCKETS}slickster` },
-      { title: "Chest Rigs", path: `${POCKETS}chest-rigs` },
+      { title: "Chesty Rig", path: `${POCKETS}chesty-rig` },
     ],
   },
   [ACCESSORIES.replace("/", "")]: {
@@ -30,7 +30,7 @@ export const MENU_ITEMS = {
     items: [
       { title: "FCPC", path: `${ACCESSORIES}fcpc` },
       { title: "The Slickster", path: `${ACCESSORIES}slickster` },
-      { title: "Chest Rigs", path: `${ACCESSORIES}chest-rigs` },
+      { title: "Chesty Rig", path: `${ACCESSORIES}chesty-rig` },
     ],
   },
   [ARMOR.replace("/", "")]: {
@@ -38,7 +38,7 @@ export const MENU_ITEMS = {
     items: [
       { title: "FCPC", path: `${ARMOR}fcpc` },
       { title: "The Slickster", path: `${ARMOR}slickster` },
-      { title: "Chest Rigs", path: `${ARMOR}chest-rigs` },
+      { title: "Chesty Rig", path: `${ARMOR}chesty-rig` },
     ],
   },
 };
