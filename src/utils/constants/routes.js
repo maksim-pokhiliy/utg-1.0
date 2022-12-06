@@ -1,6 +1,7 @@
 import CategoryPage from "../../pages/CategoryPage";
 import ProductPage from "../../pages/ProductPage";
 
+// t-shirts
 import black1 from "../../assets/images/products/BLACK.jpg";
 import black2 from "../../assets/images/products/BLACK1.jpg";
 import green1 from "../../assets/images/products/GREEN.jpg";
@@ -12,7 +13,7 @@ export const COLLECTIONS = `${ROOT}collections${ROOT}`;
 export const TSHIRTS = `${COLLECTIONS}tshirts${ROOT}`;
 export const PRODUCT = `${COLLECTIONS}:collectionId${ROOT}:productId${ROOT}`;
 
-const PRODUCTS = {
+export const PRODUCTS = {
   [TSHIRTS]: {
     image: black1,
     title: "T-shirts",

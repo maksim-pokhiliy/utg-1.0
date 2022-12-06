@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 import styles from "./index.module.scss";
 
-const CollapsibleItem = ({ title, items, path }) => {
+const CollapsibleItem = ({ title, products, path }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => setIsOpen(!isOpen);
@@ -25,7 +25,7 @@ const CollapsibleItem = ({ title, items, path }) => {
   };
 
   const renderItems = () => {
-    return items.map(({ title, path }) => {
+    return products.map(({ title, path }) => {
       return (
         <NavLink
           key={path}
@@ -48,7 +48,7 @@ const CollapsibleItem = ({ title, items, path }) => {
     >
       <div className={styles.header}>
         <NavLink
-          to={`/${path}`}
+          to={path}
           className={({ isActive }) =>
             classNames(styles.link, { [styles.activeLink]: isActive })
           }
@@ -56,12 +56,12 @@ const CollapsibleItem = ({ title, items, path }) => {
           {title}
         </NavLink>
 
-        {!!items && !!items.length && renderCrossIcon()}
+        {!!products && !!products.length && renderCrossIcon()}
       </div>
 
       <div
         className={classNames(styles.body, {
-          [styles.bodyOpen]: isOpen && !!items && !!items.length,
+          [styles.bodyOpen]: isOpen && !!products && !!products.length,
         })}
       >
         {renderItems()}

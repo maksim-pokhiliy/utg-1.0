@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 
-import { MENU_ITEMS } from "../../../../utils/constants/navigation";
+import { PRODUCTS } from "../../../../utils/constants/routes";
 
 import Logo from "../../../Logo";
 import CollapsibleItem from "../CollapsibleItem";
@@ -21,9 +21,9 @@ const NavigationMenu = () => {
         })}
       >
         <div className={styles.sideMenuScrollContainer}>
-          {Object.keys(MENU_ITEMS).map((item) => {
+          {Object.keys(PRODUCTS).map((item) => {
             return (
-              <CollapsibleItem key={item} path={item} {...MENU_ITEMS[item]} />
+              <CollapsibleItem key={item} path={item} {...PRODUCTS[item]} />
             );
           })}
         </div>
