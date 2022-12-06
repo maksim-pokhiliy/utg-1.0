@@ -27,9 +27,14 @@ const ProductPage = () => {
 
       <img src={product.image} alt="product" className={styles.image} />
 
-      <p className={styles.productPrice}>{`from ${product.price}`}</p>
+      {product.price && (
+        <p className={styles.productPrice}>{`from ${product.price}`}</p>
+      )}
 
-      <a href={`https://t.me/makspooh?message="hello!"`} className={styles.link}>
+      <a
+        href={`https://t.me/makspooh?message="hello!"`}
+        className={styles.link}
+      >
         Order in Telegram
       </a>
     </div>

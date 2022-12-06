@@ -7,7 +7,7 @@ import styles from "./index.module.scss";
 
 const CategoryPage = () => {
   const { pathname } = useLocation();
-  const { title, products } = PRODUCTS[pathname];
+  const { title, products } = PRODUCTS[pathname] || PRODUCTS[`${pathname}/`];
 
   const renderCategories = () => {
     return products.map((product) => {
