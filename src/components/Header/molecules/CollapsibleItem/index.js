@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import styles from "./index.module.scss";
 
 const CollapsibleItem = ({ title, products, path }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const { t } = useTranslation();
 
   const handleOpen = () => setIsOpen(!isOpen);
 
@@ -34,7 +37,7 @@ const CollapsibleItem = ({ title, products, path }) => {
             classNames(styles.itemLink, { [styles.itemLinkActive]: isActive })
           }
         >
-          {title}
+          {t(title)}
         </NavLink>
       );
     });
@@ -53,7 +56,7 @@ const CollapsibleItem = ({ title, products, path }) => {
             classNames(styles.link, { [styles.activeLink]: isActive })
           }
         >
-          {title}
+          {t(title)}
         </NavLink>
 
         {!!products && !!products.length && renderCrossIcon()}

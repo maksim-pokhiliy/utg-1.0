@@ -5,8 +5,8 @@
   "dependencies": {
     "classnames": "^2.3.2",
     "i18next": "^21.10.0",
-    "i18next-browser-languagedetector": "^6.1.8",
     "lodash": "^4.17.21",
+    "nanoid": "^4.0.0",
     "node-sass": "^7.0.3",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",

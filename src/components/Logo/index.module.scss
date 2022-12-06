@@ -5,9 +5,17 @@
     position: relative;
     z-index: 1;
     font-size: 22px;
+    font-weight: 900;
 }
 
 .link {
     text-decoration: none;
     color: $text-black;
+    white-space: nowrap;
+}
+
+@include tablet {
+    .container {
+        font-size: 28px;
+    }
 }

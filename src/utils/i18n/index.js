@@ -1,5 +1,4 @@
 import i18n from "i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
 import enTranslations from "./locales/en/translation.json";
@@ -24,16 +23,31 @@ const detection = {
   lookupQuerystring: "lng",
 };
 
+export const detectLanguage = () => {
+  const localLanguage = localStorage.getItem("APP_LANG") || LANGUAGES.UA;
+
+  return localLanguage;
+};
+
+const languageDetector = {
+  type: "languageDetector",
+  detect: () => {
+    const lng = detectLanguage();
+
+    return lng;
+  },
+  init: () => {},
+  cacheUserLanguage: () => {},
+};
+
 i18n
-  .use(LanguageDetector)
   .use(initReactI18next)
+  .use(languageDetector)
   .init({
     detection,
     resources,
-    ns: ["common"],
-    defaultNS: "common",
-    fallbackLng: "ua",
-    supportedLngs: ["en", "ua"],
+    fallbackLng: LANGUAGES.EN,
+    supportedLngs: Object.values(LANGUAGES),
     interpolation: {
       escapeValue: false,
     },

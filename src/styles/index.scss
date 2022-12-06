@@ -8,7 +8,7 @@ body {
     width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
-    @include font-ops;
+    @include font-ubuntu;
 
     &::-webkit-scrollbar {
         width: 10px;

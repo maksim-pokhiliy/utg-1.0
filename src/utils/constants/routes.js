@@ -21,26 +21,31 @@ export const PRODUCTS = {
     products: [
       {
         title: "Black 1",
+        description: `Small print on the left chest: Ukrainian Tactical Gear logo. Back print with "With you or for you it depends on how you trained" slogan and large graphic.`,
         image: black1,
         path: `${TSHIRTS}black1${ROOT}`,
       },
       {
         title: "Black 2",
+        description: `Small print on the left chest: Ukrainian Tactical Gear logo. Back print with "Welcome to Ukraine, suka!" slogan and large graphic.`,
         image: black2,
         path: `${TSHIRTS}black2${ROOT}`,
       },
       {
         title: "Green 1",
+        description: `Small print on the left chest: Ukrainian Tactical Gear logo. Back print with "With you or for you it depends on how you trained" slogan and large graphic.`,
         image: green1,
         path: `${TSHIRTS}green1${ROOT}`,
       },
       {
         title: "Green 2",
+        description: `Small print on the left chest: Ukrainian Tactical Gear logo. Back print with "Welcome to Ukraine, suka!" slogan and large graphic.`,
         image: green2,
         path: `${TSHIRTS}green2${ROOT}`,
       },
       {
         title: "Grey 1",
+        description: `Small print on the left chest: Ukrainian Tactical Gear logo. Back print with "Welcome to Ukraine, suka!" slogan and large graphic.`,
         image: grey1,
         path: `${TSHIRTS}grey1${ROOT}`,
       },

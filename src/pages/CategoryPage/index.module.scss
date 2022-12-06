@@ -24,16 +24,17 @@
 }
 
 .title {
-    font-size: 20px;
+    font-size: 22px;
     padding: 0 0 15px;
 }
 
 .image {
     width: 100%;
+    transition: all 0.3s;
 }
 
 .categoryTitle {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 15px;
 }
 
@@ -59,8 +60,18 @@
         background-color: $background-white;
 
         &:hover {
-            background-color: $background-gray;
+            .image {
+                transform: scale(1.03);
+            }
         }
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .categoryTitle {
+        font-size: 22px;
     }
 }
 
@@ -74,7 +85,9 @@
         background-color: $background-white;
 
         &:hover {
-            background-color: $background-gray;
+            .image {
+                transform: scale(1.03);
+            }
         }
     }
 }
