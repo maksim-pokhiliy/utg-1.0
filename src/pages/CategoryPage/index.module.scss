@@ -6,6 +6,11 @@
     flex-direction: column;
 }
 
+.back {
+    display: flex;
+    align-items: center;
+}
+
 .categories {
     display: grid;
     grid-gap: 15px;

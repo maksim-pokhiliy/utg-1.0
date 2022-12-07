@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import Select from "../../../Select";
+import Select from "../../../base/Select";
 
 const LanguageSelect = () => {
   const [options, setOptions] = useState([]);

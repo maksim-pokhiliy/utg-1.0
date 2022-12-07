@@ -106,18 +106,10 @@
     .bodyOpen {
         padding-top: 25px;
     }
-
-    .itemLink {
-        margin-bottom: 25px;
-    }
 }
 
 @include desktop {
     .bodyOpen {
         padding-top: 30px;
-    }
-
-    .itemLink {
-        margin-bottom: 30px;
     }
 }

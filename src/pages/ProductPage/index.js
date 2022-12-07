@@ -32,6 +32,11 @@ const ProductPage = () => {
       <div className={styles.block}>
         <p className={styles.title}>{t(product.title)}</p>
 
+        <p className={styles.sizes}>
+          {t("Available sizes: ")}
+          {product.sizes.join(", ")}
+        </p>
+
         {product.price && (
           <p className={styles.productPrice}>{`from ${product.price}`}</p>
         )}
