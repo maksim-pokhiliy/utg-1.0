@@ -52,7 +52,7 @@ const ProductPage = () => {
           <p className={styles.productPrice}>{preparePrice(product.price)}</p>
         )}
 
-        <a href={`https://t.me/ukrain_tactical_gears`} className={styles.link}>
+        <a href={`https://t.me/ukrain_tactical_gear`} className={styles.link}>
           {t("Order in Telegram")}
         </a>
 
