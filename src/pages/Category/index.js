@@ -10,7 +10,18 @@ const CategoryPage = () => {
   const { pathname } = useLocation();
   const { title, products } = PRODUCTS[pathname] || PRODUCTS[`${pathname}/`];
 
-  const { t } = useTranslation();
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
+
+  const preparePrice = (price) => {
+    if (language === "en") {
+      return `${t("For donate")} ${t("$")}${Math.round(price / 36.5)}`;
+    }
+
+    return `${t("For donate")} ${price} ${t("$")}`;
+  };
 
   const renderCategories = () => {
     return products.map((product) => {
@@ -22,7 +33,9 @@ const CategoryPage = () => {
 
           <img src={image} alt="category" className={styles.image} />
 
-          {price && <p className={styles.categoryPrice}>{`from ${price}`}</p>}
+          {price && (
+            <p className={styles.categoryPrice}>{preparePrice(price)}</p>
+          )}
         </NavLink>
       );
     });

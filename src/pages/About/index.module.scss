@@ -1,0 +1,29 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 22px;
+    padding: 0 0 15px;
+}
+
+.text {
+    font-size: 16px;
+    margin-bottom: 15px;
+    max-width: $tablet-width;
+}
+
+.image {
+    max-width: 320px;
+    margin-top: 30px;
+}
+
+@include tablet {
+    .title {
+        font-size: 28px;
+    }
+}

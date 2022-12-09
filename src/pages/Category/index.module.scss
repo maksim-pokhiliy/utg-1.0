@@ -6,18 +6,13 @@
     flex-direction: column;
 }
 
-.back {
-    display: flex;
-    align-items: center;
-}
-
 .categories {
     display: grid;
     grid-gap: 15px;
 }
 
 .categoryContainer {
-    padding: 15px 0 0;
+    padding: 15px 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

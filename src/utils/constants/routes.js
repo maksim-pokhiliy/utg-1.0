@@ -1,5 +1,6 @@
-import CategoryPage from "../../pages/CategoryPage";
-import ProductPage from "../../pages/ProductPage";
+import Category from "../../pages/Category";
+import Product from "../../pages/Product";
+import About from "../../pages/About";
 
 // t-shirts
 import black1 from "../../assets/images/products/BLACK.jpg";
@@ -12,6 +13,7 @@ export const ROOT = "/";
 export const COLLECTIONS = `${ROOT}collections${ROOT}`;
 export const TSHIRTS = `${COLLECTIONS}tshirts${ROOT}`;
 export const PRODUCT = `${COLLECTIONS}:collectionId${ROOT}:productId${ROOT}`;
+export const ABOUT = `${ROOT}about${ROOT}`;
 
 export const PRODUCTS = {
   [TSHIRTS]: {
@@ -25,6 +27,7 @@ export const PRODUCTS = {
         image: black1,
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}black1${ROOT}`,
+        price: 1000,
       },
       {
         title: "«Welcome» Black",
@@ -32,6 +35,7 @@ export const PRODUCTS = {
         image: black2,
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}black2${ROOT}`,
+        price: 1000,
       },
       {
         title: "«Dead» Green",
@@ -39,6 +43,7 @@ export const PRODUCTS = {
         image: green1,
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}green1${ROOT}`,
+        price: 1000,
       },
       {
         title: "«Welcome» Green",
@@ -46,6 +51,7 @@ export const PRODUCTS = {
         image: green2,
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}green2${ROOT}`,
+        price: 1000,
       },
       {
         title: "«Welcome» Grey",
@@ -53,6 +59,7 @@ export const PRODUCTS = {
         image: grey1,
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}grey1${ROOT}`,
+        price: 1000,
       },
     ],
   },
@@ -61,7 +68,7 @@ export const PRODUCTS = {
 export const PUBLIC_ROUTES = {
   [ROOT]: {
     title: "All categories",
-    component: CategoryPage,
+    component: Category,
     path: ROOT,
     products: Object.values(PRODUCTS).map((product) => ({
       image: product.image,
@@ -71,9 +78,10 @@ export const PUBLIC_ROUTES = {
   },
   [TSHIRTS]: {
     title: "T-shirts",
-    component: CategoryPage,
+    component: Category,
     path: TSHIRTS,
     products: PRODUCTS[TSHIRTS].products,
   },
-  [PRODUCT]: { component: ProductPage, path: PRODUCT },
+  [PRODUCT]: { component: Product, path: PRODUCT },
+  [ABOUT]: { title: "About the project", component: About, path: ABOUT },
 };

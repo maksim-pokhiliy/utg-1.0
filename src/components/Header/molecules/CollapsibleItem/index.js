@@ -67,7 +67,7 @@ const CollapsibleItem = ({ title, products, path }) => {
           [styles.bodyOpen]: isOpen && !!products && !!products.length,
         })}
       >
-        {renderItems()}
+        {products && renderItems()}
       </div>
     </div>
   );

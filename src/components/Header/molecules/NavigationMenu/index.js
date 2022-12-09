@@ -7,6 +7,7 @@ import Logo from "../../../Logo";
 import CollapsibleItem from "../CollapsibleItem";
 
 import styles from "./index.module.scss";
+import { MENU_ITEMS } from "../../../../utils/constants/sideMenu";
 
 const NavigationMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,9 +22,13 @@ const NavigationMenu = () => {
         })}
       >
         <div className={styles.sideMenuScrollContainer}>
-          {Object.keys(PRODUCTS).map((item) => {
+          {Object.keys(MENU_ITEMS).map((item) => {
             return (
-              <CollapsibleItem key={item} path={item} {...PRODUCTS[item]} />
+              <CollapsibleItem
+                key={item}
+                path={item}
+                {...(PRODUCTS[item] || MENU_ITEMS[item])}
+              />
             );
           })}
         </div>

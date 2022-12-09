@@ -8,7 +8,10 @@ import styles from "./index.module.scss";
 
 const ProductPage = () => {
   const { pathname } = useLocation();
-  const { t } = useTranslation();
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation();
 
   const product = useMemo(() => {
     const splittedPathname = pathname.split("/").filter((el) => el);
@@ -18,6 +21,14 @@ const ProductPage = () => {
 
     return product;
   }, [pathname]);
+
+  const preparePrice = (price) => {
+    if (language === "en") {
+      return `${t("For donate")} ${t("$")}${Math.round(price / 36.5)}`;
+    }
+
+    return `${t("For donate")} ${price} ${t("$")}`;
+  };
 
   if (!product) {
     return <Navigate to={ROOT} />;
@@ -38,7 +49,7 @@ const ProductPage = () => {
         </p>
 
         {product.price && (
-          <p className={styles.productPrice}>{`from ${product.price}`}</p>
+          <p className={styles.productPrice}>{preparePrice(product.price)}</p>
         )}
 
         <a
