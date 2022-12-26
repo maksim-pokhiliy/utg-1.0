@@ -7,7 +7,8 @@ import black1 from "../../assets/images/products/BLACK.jpg";
 import black2 from "../../assets/images/products/BLACK1.jpg";
 import green1 from "../../assets/images/products/GREEN.jpg";
 import green2 from "../../assets/images/products/GREEN1.jpg";
-import grey1 from "../../assets/images/products/GREY1.jpg";
+import grey1 from "../../assets/images/products/GREY.jpg";
+import grey2 from "../../assets/images/products/GREY1.jpg";
 
 export const ROOT = "/";
 export const COLLECTIONS = `${ROOT}collections${ROOT}`;
@@ -22,7 +23,7 @@ export const PRODUCTS = {
     path: TSHIRTS,
     products: [
       {
-        title: "«Dead» Black",
+        title: "«Death» Black",
         description: `Small print on the left chest: Ukrainian Tactical Gear logo. Back print with "With you or for you it depends on how you trained" slogan and large graphic.`,
         image: black1,
         sizes: ["M", "L", "XL", "2XL"],
@@ -38,7 +39,7 @@ export const PRODUCTS = {
         price: 1000,
       },
       {
-        title: "«Dead» Green",
+        title: "«Death» Green",
         description: `Small print on the left chest: Ukrainian Tactical Gear logo. Back print with "With you or for you it depends on how you trained" slogan and large graphic.`,
         image: green1,
         sizes: ["M", "L", "XL", "2XL"],
@@ -54,11 +55,19 @@ export const PRODUCTS = {
         price: 1000,
       },
       {
-        title: "«Welcome» Grey",
-        description: `Small print on the left chest: Ukrainian Tactical Gear logo. Back print with "Welcome to Ukraine, suka!" slogan and large graphic.`,
+        title: "«Death» Grey",
+        description: `Small print on the left chest: Ukrainian Tactical Gear logo. Back print with "With you or for you it depends on how you trained" slogan and large graphic.`,
         image: grey1,
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}grey1${ROOT}`,
+        price: 1000,
+      },
+      {
+        title: "«Welcome» Grey",
+        description: `Small print on the left chest: Ukrainian Tactical Gear logo. Back print with "Welcome to Ukraine, suka!" slogan and large graphic.`,
+        image: grey2,
+        sizes: ["M", "L", "XL", "2XL"],
+        path: `${TSHIRTS}grey2${ROOT}`,
         price: 1000,
       },
     ],
