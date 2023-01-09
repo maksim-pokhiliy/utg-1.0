@@ -43,6 +43,12 @@
     margin-top: 15px;
 }
 
+.soldOut {
+    font-size: 14px;
+    margin-top: 15px;
+    color: $text-orange;
+}
+
 @include mobile-md {
     .categories {
         grid-template-columns: repeat(2, 1fr);

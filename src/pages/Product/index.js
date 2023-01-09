@@ -5,6 +5,10 @@ import { useTranslation } from "react-i18next";
 import { PUBLIC_ROUTES as PRODUCTS, ROOT } from "../../utils/constants/routes";
 
 import styles from "./index.module.scss";
+import {
+  PRODUCT_AVAILABLE,
+  PRODUCT_NOT_AVAILABLE,
+} from "../../utils/constants/common";
 
 const ProductPage = () => {
   const { pathname } = useLocation();
@@ -30,6 +34,26 @@ const ProductPage = () => {
     return `${t("For donate")} ${price} ${t("$")}`;
   };
 
+  const renderOrderButton = () => {
+    switch (product.availability) {
+      case PRODUCT_AVAILABLE: {
+        return (
+          <a href={`https://t.me/ukrain_tactical_gear`} className={styles.link}>
+            {t("Order in Telegram")}
+          </a>
+        );
+      }
+
+      case PRODUCT_NOT_AVAILABLE: {
+        return <p className={styles.soldOut}>{t("Not available")}</p>;
+      }
+
+      default: {
+        return <></>;
+      }
+    }
+  };
+
   if (!product) {
     return <Navigate to={ROOT} />;
   }
@@ -52,9 +76,7 @@ const ProductPage = () => {
           <p className={styles.productPrice}>{preparePrice(product.price)}</p>
         )}
 
-        <a href={`https://t.me/ukrain_tactical_gear`} className={styles.link}>
-          {t("Order in Telegram")}
-        </a>
+        {renderOrderButton()}
 
         <p className={styles.description}>{t(product.description)}</p>
       </div>

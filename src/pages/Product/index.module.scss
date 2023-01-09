@@ -10,6 +10,7 @@
 .block {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .title {
@@ -49,6 +50,11 @@
     &:hover {
         opacity: 1;
     }
+}
+
+.soldOut {
+    color: $text-orange;
+    margin-top: 15px;
 }
 
 @include tablet {

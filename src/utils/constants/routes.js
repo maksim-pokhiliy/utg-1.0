@@ -2,6 +2,8 @@ import Category from "../../pages/Category";
 import Product from "../../pages/Product";
 import About from "../../pages/About";
 
+import { PRODUCT_AVAILABLE, PRODUCT_NOT_AVAILABLE } from "./common";
+
 // t-shirts
 import black1 from "../../assets/images/products/BLACK.jpg";
 import black2 from "../../assets/images/products/BLACK1.jpg";
@@ -29,6 +31,7 @@ export const PRODUCTS = {
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}black1${ROOT}`,
         price: 1000,
+        availability: PRODUCT_NOT_AVAILABLE,
       },
       {
         title: "«Welcome» Black",
@@ -37,6 +40,7 @@ export const PRODUCTS = {
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}black2${ROOT}`,
         price: 1000,
+        availability: PRODUCT_AVAILABLE,
       },
       {
         title: "«Death» Green",
@@ -45,6 +49,7 @@ export const PRODUCTS = {
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}green1${ROOT}`,
         price: 1000,
+        availability: PRODUCT_AVAILABLE,
       },
       {
         title: "«Welcome» Green",
@@ -53,6 +58,7 @@ export const PRODUCTS = {
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}green2${ROOT}`,
         price: 1000,
+        availability: PRODUCT_AVAILABLE,
       },
       {
         title: "«Death» Grey",
@@ -61,6 +67,7 @@ export const PRODUCTS = {
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}grey1${ROOT}`,
         price: 1000,
+        availability: PRODUCT_AVAILABLE,
       },
       {
         title: "«Welcome» Grey",
@@ -69,6 +76,7 @@ export const PRODUCTS = {
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}grey2${ROOT}`,
         price: 1000,
+        availability: PRODUCT_AVAILABLE,
       },
     ],
   },

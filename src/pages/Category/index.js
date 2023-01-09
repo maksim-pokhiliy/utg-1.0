@@ -1,6 +1,10 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink, useLocation } from "react-router-dom";
+import {
+  PRODUCT_AVAILABLE,
+  PRODUCT_NOT_AVAILABLE,
+} from "../../utils/constants/common";
 
 import { PUBLIC_ROUTES as PRODUCTS } from "../../utils/constants/routes";
 
@@ -23,9 +27,25 @@ const CategoryPage = () => {
     return `${t("For donate")} ${price} ${t("$")}`;
   };
 
-  const renderCategories = () => {
+  const renderPrice = (availability, price) => {
+    switch (availability) {
+      case PRODUCT_AVAILABLE: {
+        return <p className={styles.categoryPrice}>{preparePrice(price)}</p>;
+      }
+
+      case PRODUCT_NOT_AVAILABLE: {
+        return <p className={styles.soldOut}>{t("Not available")}</p>;
+      }
+
+      default: {
+        return <></>;
+      }
+    }
+  };
+
+  const renderProducts = () => {
     return products.map((product) => {
-      const { title, image, path, price } = product;
+      const { title, image, path, price, availability } = product;
 
       return (
         <NavLink key={title} className={styles.categoryContainer} to={path}>
@@ -33,9 +53,7 @@ const CategoryPage = () => {
 
           <img src={image} alt="category" className={styles.image} />
 
-          {price && (
-            <p className={styles.categoryPrice}>{preparePrice(price)}</p>
-          )}
+          {renderPrice(availability, price)}
         </NavLink>
       );
     });
@@ -45,7 +63,7 @@ const CategoryPage = () => {
     <div className={styles.container}>
       <p className={styles.title}>{t(title)}</p>
 
-      <div className={styles.categories}>{renderCategories()}</div>
+      <div className={styles.categories}>{renderProducts()}</div>
     </div>
   );
 };
