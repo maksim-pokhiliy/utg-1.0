@@ -9,5 +9,6 @@
 # misc
 .env
 .firebase
+firebase-debug.log
 
 npm-debug.log*

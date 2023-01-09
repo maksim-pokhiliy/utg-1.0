@@ -1,12 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink, useLocation } from "react-router-dom";
+
+import { PUBLIC_ROUTES as PRODUCTS } from "../../utils/constants/routes";
 import {
   PRODUCT_AVAILABLE,
   PRODUCT_NOT_AVAILABLE,
 } from "../../utils/constants/common";
-
-import { PUBLIC_ROUTES as PRODUCTS } from "../../utils/constants/routes";
 
 import styles from "./index.module.scss";
 

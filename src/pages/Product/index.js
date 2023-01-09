@@ -3,12 +3,9 @@ import { Navigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { PUBLIC_ROUTES as PRODUCTS, ROOT } from "../../utils/constants/routes";
+import { PRODUCT_AVAILABLE } from "../../utils/constants/common";
 
 import styles from "./index.module.scss";
-import {
-  PRODUCT_AVAILABLE,
-  PRODUCT_NOT_AVAILABLE,
-} from "../../utils/constants/common";
 
 const ProductPage = () => {
   const { pathname } = useLocation();
@@ -26,6 +23,11 @@ const ProductPage = () => {
     return product;
   }, [pathname]);
 
+  const isAvailable = useMemo(
+    () => product?.availability === PRODUCT_AVAILABLE,
+    [product]
+  );
+
   const preparePrice = (price) => {
     if (language === "en") {
       return `${t("For donate")} ${t("$")}${Math.round(price / 36.5)}`;
@@ -34,17 +36,15 @@ const ProductPage = () => {
     return `${t("For donate")} ${price} ${t("$")}`;
   };
 
-  const renderOrderButton = () => {
-    switch (product.availability) {
-      case PRODUCT_AVAILABLE: {
+  const renderPrice = () => {
+    switch (isAvailable) {
+      case true: {
         return (
-          <a href={`https://t.me/ukrain_tactical_gear`} className={styles.link}>
-            {t("Order in Telegram")}
-          </a>
+          <p className={styles.productPrice}>{preparePrice(product.price)}</p>
         );
       }
 
-      case PRODUCT_NOT_AVAILABLE: {
+      case false: {
         return <p className={styles.soldOut}>{t("Not available")}</p>;
       }
 
@@ -67,16 +67,20 @@ const ProductPage = () => {
       <div className={styles.block}>
         <p className={styles.title}>{t(product.title)}</p>
 
-        <p className={styles.sizes}>
-          {t("Available sizes: ")}
-          {product.sizes.join(", ")}
-        </p>
-
-        {product.price && (
-          <p className={styles.productPrice}>{preparePrice(product.price)}</p>
+        {isAvailable && (
+          <p className={styles.sizes}>
+            {t("Available sizes: ")}
+            {product.sizes.join(", ")}
+          </p>
         )}
 
-        {renderOrderButton()}
+        {renderPrice()}
+
+        {isAvailable && (
+          <a href={`https://t.me/ukrain_tactical_gear`} className={styles.link}>
+            {t("Order in Telegram")}
+          </a>
+        )}
 
         <p className={styles.description}>{t(product.description)}</p>
       </div>
