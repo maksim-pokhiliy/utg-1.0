@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { NavLink, useLocation } from "react-router-dom";
 
 import { PUBLIC_ROUTES as PRODUCTS } from "../../utils/constants/routes";
+
 import {
   PRODUCT_AVAILABLE,
   PRODUCT_NOT_AVAILABLE,
@@ -34,7 +35,7 @@ const CategoryPage = () => {
       }
 
       case PRODUCT_NOT_AVAILABLE: {
-        return <p className={styles.soldOut}>{t("Not available")}</p>;
+        return <p className={styles.soldOut}>{t("Sold out")}</p>;
       }
 
       default: {

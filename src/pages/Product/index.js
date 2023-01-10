@@ -45,7 +45,7 @@ const ProductPage = () => {
       }
 
       case false: {
-        return <p className={styles.soldOut}>{t("Not available")}</p>;
+        return <p className={styles.soldOut}>{t("Sold out")}</p>;
       }
 
       default: {
