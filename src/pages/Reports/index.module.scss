@@ -1,0 +1,46 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 22px;
+    padding: 0 0 15px;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+}
+
+.image {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.text {
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+@include mobile-md {
+    .images {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+@include tablet {
+    .title {
+        font-size: 28px;
+    }
+
+    .images {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 25px;
+    }
+}

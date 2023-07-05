@@ -1,6 +1,7 @@
-import { ABOUT, PRODUCTS, PUBLIC_ROUTES } from "./routes";
+import { ABOUT, PRODUCTS, PUBLIC_ROUTES, REPORTS } from "./routes";
 
 export const MENU_ITEMS = {
   ...PRODUCTS,
+  [REPORTS]: PUBLIC_ROUTES[REPORTS],
   [ABOUT]: PUBLIC_ROUTES[ABOUT],
 };

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classNames from "classnames";
+import { useLocation } from "react-router-dom";
 
 import { PRODUCTS } from "../../../../utils/constants/routes";
 
@@ -10,9 +11,16 @@ import styles from "./index.module.scss";
 import { MENU_ITEMS } from "../../../../utils/constants/sideMenu";
 
 const NavigationMenu = () => {
+  const { key } = useLocation();
+
   const [isOpen, setIsOpen] = useState(false);
 
   const handleBurgerClick = () => setIsOpen(!isOpen);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    setIsOpen(false);
+  }, [key]);
 
   return (
     <div className={styles.container}>

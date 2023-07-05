@@ -1,5 +1,6 @@
 import Category from "../../pages/Category";
 import Product from "../../pages/Product";
+import Reports from "../../pages/Reports";
 import About from "../../pages/About";
 
 import { PRODUCT_AVAILABLE, PRODUCT_NOT_AVAILABLE } from "./common";
@@ -12,16 +13,30 @@ import green2 from "../../assets/images/products/GREEN1.jpg";
 import grey1 from "../../assets/images/products/GREY.jpg";
 import grey2 from "../../assets/images/products/GREY1.jpg";
 
+// patches
+import waiting from "../../assets/images/products/patches_waiting.jpg";
+import welcome from "../../assets/images/products/patches_welcome.jpg";
+import withYou from "../../assets/images/products/patches_with_you.jpg";
+import set from "../../assets/images/products/patches_set.jpg";
+import utg from "../../assets/images/products/patches_utg.jpg";
+
+// reports
+import report1 from "../../assets/images/report_1.jpg";
+import report2 from "../../assets/images/report_2.jpg";
+import report3 from "../../assets/images/report_3.jpg";
+
 export const ROOT = "/";
 export const COLLECTIONS = `${ROOT}collections${ROOT}`;
 export const TSHIRTS = `${COLLECTIONS}tshirts${ROOT}`;
+export const PATCHES = `${COLLECTIONS}patches${ROOT}`;
 export const PRODUCT = `${COLLECTIONS}:collectionId${ROOT}:productId${ROOT}`;
+export const REPORTS = `${ROOT}reports${ROOT}`;
 export const ABOUT = `${ROOT}about${ROOT}`;
 
 export const PRODUCTS = {
   [TSHIRTS]: {
     image: black1,
-    title: "T-shirts",
+    title: "T-Shirts",
     path: TSHIRTS,
     products: [
       {
@@ -40,7 +55,7 @@ export const PRODUCTS = {
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}black2${ROOT}`,
         price: 1000,
-        availability: PRODUCT_AVAILABLE,
+        availability: PRODUCT_NOT_AVAILABLE,
       },
       {
         title: "«Death» Green",
@@ -49,7 +64,7 @@ export const PRODUCTS = {
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}green1${ROOT}`,
         price: 1000,
-        availability: PRODUCT_AVAILABLE,
+        availability: PRODUCT_NOT_AVAILABLE,
       },
       {
         title: "«Welcome» Green",
@@ -58,7 +73,7 @@ export const PRODUCTS = {
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}green2${ROOT}`,
         price: 1000,
-        availability: PRODUCT_AVAILABLE,
+        availability: PRODUCT_NOT_AVAILABLE,
       },
       {
         title: "«Death» Grey",
@@ -67,7 +82,7 @@ export const PRODUCTS = {
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}grey1${ROOT}`,
         price: 1000,
-        availability: PRODUCT_AVAILABLE,
+        availability: PRODUCT_NOT_AVAILABLE,
       },
       {
         title: "«Welcome» Grey",
@@ -76,6 +91,48 @@ export const PRODUCTS = {
         sizes: ["M", "L", "XL", "2XL"],
         path: `${TSHIRTS}grey2${ROOT}`,
         price: 1000,
+        availability: PRODUCT_NOT_AVAILABLE,
+      },
+    ],
+  },
+  [PATCHES]: {
+    image: utg,
+    title: "Patches",
+    path: PATCHES,
+    products: [
+      {
+        title: "«Waiting»",
+        image: waiting,
+        path: `${PATCHES}patch_waiting${ROOT}`,
+        price: 300,
+        availability: PRODUCT_AVAILABLE,
+      },
+      {
+        title: "«Welcome»",
+        image: welcome,
+        path: `${PATCHES}patch_welcome${ROOT}`,
+        price: 300,
+        availability: PRODUCT_AVAILABLE,
+      },
+      {
+        title: "«Death»",
+        image: withYou,
+        path: `${PATCHES}patch_death${ROOT}`,
+        price: 300,
+        availability: PRODUCT_AVAILABLE,
+      },
+      {
+        title: "«UTG»",
+        image: utg,
+        path: `${PATCHES}patch_utg${ROOT}`,
+        price: 300,
+        availability: PRODUCT_AVAILABLE,
+      },
+      {
+        title: "Set of «Waiting, Welcome, Death»",
+        image: set,
+        path: `${PATCHES}patch_set${ROOT}`,
+        price: 800,
         availability: PRODUCT_AVAILABLE,
       },
     ],
@@ -94,11 +151,30 @@ export const PUBLIC_ROUTES = {
     })),
   },
   [TSHIRTS]: {
-    title: "T-shirts",
+    title: "T-Shirts",
     component: Category,
     path: TSHIRTS,
     products: PRODUCTS[TSHIRTS].products,
   },
+  [PATCHES]: {
+    title: "Patches",
+    component: Category,
+    path: PATCHES,
+    products: PRODUCTS[PATCHES].products,
+  },
   [PRODUCT]: { component: Product, path: PRODUCT },
+  [REPORTS]: {
+    title: "Reports",
+    component: Reports,
+    path: REPORTS,
+    reports: [
+      { image: report1 },
+      { image: report2 },
+      {
+        image: report3,
+        title: "For material for the manufacture of initiators for FPV",
+      },
+    ],
+  },
   [ABOUT]: { title: "About the project", component: About, path: ABOUT },
 };

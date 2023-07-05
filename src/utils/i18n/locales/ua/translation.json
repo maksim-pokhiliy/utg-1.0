@@ -1,6 +1,6 @@
 {
   "All categories": "Усі категорії",
-  "T-shirts": "Футболки",
+  "T-Shirts": "Футболки",
   "«Death» Black": "«Death» Чорна",
   "«Welcome» Black": "«Welcome» Чорна",
   "«Death» Green": "«Death» Зелена",
@@ -17,5 +17,9 @@
   "All proceeds from the sale will be used to purchase equipment, consumables, and repair equipment. After the start of sales, another section with reports will appear here.": "Усі кошти з продаж підуть на закупівлі спорядження, витратних матеріалів, ремонт техніки. Після старту продаж тут з'явиться ще один розділ із звітами.",
   "For donate": "За донат",
   "$": "UAH",
-  "Sold out": "Sold out"
+  "Sold out": "Sold out",
+  "Patches": "Патчі",
+  "Set of «Waiting, Welcome, Death»": "Набір із «Waiting, Welcome, Death»",
+  "Reports": "Звіти",
+  "For material for the manufacture of initiators for FPV": "За матеріал для виготовлення ініціаторів до FPV"
 }

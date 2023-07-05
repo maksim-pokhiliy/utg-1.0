@@ -1,6 +1,6 @@
 {
   "All categories": "All categories",
-  "T-shirts": "T-shirts",
+  "T-Shirts": "T-Shirts",
   "«Death» Black": "«Death» Black",
   "«Welcome» Black": "«Welcome» Black",
   "«Death» Green": "«Death» Green",
@@ -17,5 +17,9 @@
   "All proceeds from the sale will be used to purchase equipment, consumables, and repair equipment. After the start of sales, another section with reports will appear here.": "All proceeds from the sale will be used to purchase equipment, consumables, and repair equipment. After the start of sales, another section with reports will appear here.",
   "For donate": "For donate",
   "$": "$",
-  "Sold out": "Sold out"
+  "Sold out": "Sold out",
+  "Patches": "Patches",
+  "Set of «Waiting, Welcome, Death»": "Set of «Waiting, Welcome, Death»",
+  "Reports": "Reports",
+  "For material for the manufacture of initiators for FPV": "For material for the manufacture of initiators for FPV"
 }

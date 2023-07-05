@@ -67,7 +67,7 @@ const ProductPage = () => {
       <div className={styles.block}>
         <p className={styles.title}>{t(product.title)}</p>
 
-        {isAvailable && (
+        {isAvailable && product.sizes && (
           <p className={styles.sizes}>
             {t("Available sizes: ")}
             {product.sizes.join(", ")}
