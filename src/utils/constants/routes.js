@@ -24,6 +24,7 @@ import utg from "../../assets/images/products/patches_utg.jpg";
 import report1 from "../../assets/images/report_1.jpg";
 import report2 from "../../assets/images/report_2.jpg";
 import report3 from "../../assets/images/report_3.jpg";
+import report4 from "../../assets/images/report_4.jpg";
 
 export const ROOT = "/";
 export const COLLECTIONS = `${ROOT}collections${ROOT}`;
@@ -174,6 +175,7 @@ export const PUBLIC_ROUTES = {
         image: report3,
         title: "For material for the manufacture of initiators for FPV",
       },
+      { image: report4 },
     ],
   },
   [ABOUT]: { title: "About the project", component: About, path: ABOUT },
