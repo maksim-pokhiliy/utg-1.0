@@ -28,6 +28,7 @@ import report4 from "../../assets/images/report_4.jpg";
 import report5 from "../../assets/images/report_5.jpg";
 import report6 from "../../assets/images/report_6.jpg";
 import report7 from "../../assets/images/report_7.jpg";
+import report8 from "../../assets/images/report_8.jpg";
 
 export const ROOT = "/";
 export const COLLECTIONS = `${ROOT}collections${ROOT}`;
@@ -182,6 +183,7 @@ export const PUBLIC_ROUTES = {
       { image: report5 },
       { image: report6 },
       { image: report7 },
+      { image: report8 },
     ],
   },
   [ABOUT]: { title: "About the project", component: About, path: ABOUT },
