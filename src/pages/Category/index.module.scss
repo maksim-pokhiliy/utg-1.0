@@ -8,7 +8,8 @@
 
 .categories {
     display: grid;
-    grid-gap: 15px;
+    gap: 15px;
+    align-items: end;
 }
 
 .categoryContainer {
@@ -30,6 +31,8 @@
 
 .image {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
     transition: all 0.3s;
 }
 
