@@ -77,7 +77,11 @@ const ProductPage = () => {
         {renderPrice()}
 
         {isAvailable && (
-          <a href={`https://t.me/ukrain_tactical_gear`} className={styles.link}>
+          <a
+            href={`https://t.me/ukrain_tactical_gear`}
+            target="__blank"
+            className={styles.link}
+          >
             {t("Order in Telegram")}
           </a>
         )}

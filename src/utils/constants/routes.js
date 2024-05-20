@@ -30,10 +30,14 @@ import report6 from "../../assets/images/report_6.jpg";
 import report7 from "../../assets/images/report_7.jpg";
 import report8 from "../../assets/images/report_8.jpg";
 
+// patches
+import stickers2 from "../../assets/images/products/stickers2.JPG";
+
 export const ROOT = "/";
 export const COLLECTIONS = `${ROOT}collections${ROOT}`;
 export const TSHIRTS = `${COLLECTIONS}tshirts${ROOT}`;
 export const PATCHES = `${COLLECTIONS}patches${ROOT}`;
+export const STICKERS = `${COLLECTIONS}stickers${ROOT}`;
 export const PRODUCT = `${COLLECTIONS}:collectionId${ROOT}:productId${ROOT}`;
 export const REPORTS = `${ROOT}reports${ROOT}`;
 export const ABOUT = `${ROOT}about${ROOT}`;
@@ -142,6 +146,20 @@ export const PRODUCTS = {
       },
     ],
   },
+  [STICKERS]: {
+    image: stickers2,
+    title: "Stickers",
+    path: STICKERS,
+    products: [
+      {
+        title: "«Sticker Pack»",
+        image: stickers2,
+        path: `${STICKERS}sticker_utg${ROOT}`,
+        price: 250,
+        availability: PRODUCT_AVAILABLE,
+      },
+    ],
+  },
 };
 
 export const PUBLIC_ROUTES = {
@@ -166,6 +184,12 @@ export const PUBLIC_ROUTES = {
     component: Category,
     path: PATCHES,
     products: PRODUCTS[PATCHES].products,
+  },
+  [STICKERS]: {
+    title: "Stickers",
+    component: Category,
+    path: STICKERS,
+    products: PRODUCTS[STICKERS].products,
   },
   [PRODUCT]: { component: Product, path: PRODUCT },
   [REPORTS]: {
